@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Greetings Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Holiday Greetings Generator!</h1>
+        <p class="compliments">Compliments Champ!<br>You made it to the end of the year 2023.<br>Congrats!</p>
+        <form action="/generate" method="post">
+            <label for="name">Please enter your name:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Generate Greeting</button>
+        </form>
+        {% if greeting %}
+            <div class="greeting">
+                {{ greeting }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
